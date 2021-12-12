@@ -1,0 +1,36 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.main-img{
+  background-image: url(https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2021/01/1200/675/iStock-1160442875.jpg?ve=1&tl=1);
+  height: 100vh;
+  width: 100%;
+}
+
+.money {
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.money:hover {
+  transform: scale(1.02);
+}
+
+.action:hover {
+  transform: scale(1.02);
+}
+
+.header{
+  height: 10vh;
+}
+
+.footer{
+  height: 5vh;
+}

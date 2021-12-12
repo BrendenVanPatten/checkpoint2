@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.0.2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="container-fluid p-0">
+    <div class="row header">
+      <div class="col text-center bg-dark text-light">
+        <h2 style="font-family: cursive;" class="mt-3">Money Counter</h2>
+      </div>
+    </div>
+  </header>
+
+  <main class=" container-fluid main-img">
+    <div class="row text-center">
+      <div class="col-md-6 mt-5">
+        <button class="btn btn bg-dark text-light money" onclick="drawPrinter()" id="print" disabled>Printer</button>
+      </div>
+      <div class="col-md-6 mt-5">
+        <button class="btn btn bg-dark text-light money" onclick="countFive()" id="five" disabled> Auto $5.00</button>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-6 mt-5">
+        <button class="btn btn bg-dark text-light money" id="ten" onclick="countTen()" disabled>Auto $10.00</button>
+      </div>
+      <div class="col-md-6 mt-5">
+        <button class="btn btn bg-dark text-light money" id="winner" onclick="winner()" disabled>WIN LOTTERY
+        </button>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6 text-center mt-5">
+        <button class="rounded shadow money" id="count" onclick="drawCount()">
+
+          <img class="rounded shadow" src="https://viralchop.com/wp-content/uploads/2020/01/Bitcoin-Blockchain-Code.gif"
+            alt="" height="200px" width="250px">
+        </button>
+      </div>
+      <div class="col-md-6 mt-5 text-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            BANK: <h5>$<span id="counter-label"></span></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Upgraded Printer</li>
+            <li class="list-group-item">Cost: $100 = $5 every 2 sec</li>
+            <li class="list-group-item">Cost: $200 = $10 every 2 sec</li>
+            <li class="list-group-item">WINNER WINNER</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="row text-center footer">
+      <div class="col-12 text-light bg-dark">
+        <h3 style="font-family: cursive;" class="mt-2">Made by BVP</h3>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
