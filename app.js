@@ -29,6 +29,9 @@ let printer = 2000
 
 function drawCount() {
   updateDisplay(++counter);
+  if (counter >= 30) {
+    counter += 1;
+  }
 }
 
 function buyFive() {
@@ -84,7 +87,7 @@ function updateDisplay(val) {
     // @ts-ignore
     button2.disabled = false;
   }
-  if (counter >= 10 && !hasbutton5beenclicked) {
+  if (counter >= 1000 && !hasbutton5beenclicked) {
     // @ts-ignore
     button5.disabled = false;
   }
@@ -107,6 +110,7 @@ function buyPrinter() {
 function drawPrinter(printer) {
   upgradeCount(++upgrade)
   // hasbutton5beenclicked = true
+  buyPrinter()
   counter += 2000
 
   // @ts-ignore
@@ -114,6 +118,13 @@ function drawPrinter(printer) {
 
   // drawCount(printer)
   updateDisplay(++counter)
-  buyPrinter()
 }
 
+// document.getElementById("upgradeLevel");
+
+// var upgradeLevel =
+//   numbers.innerHTML = counter;
+// if (counter >= 30) {
+//   counter += 2;
+//   upgradeLevel.innerHTML = "";
+// }
