@@ -18,6 +18,10 @@ let hasbutton3beenclicked = false
 
 let hasbutton5beenclicked = false
 
+let upgrade = 0
+
+// let upgradecount = document.getElementById('upgradecount')
+
 // let increment = 10000
 
 
@@ -70,11 +74,11 @@ function winner() {
 function updateDisplay(val) {
   document.getElementById("counter-label").innerHTML = val;
 
-  if (counter >= 15 && !hasbuttonbeenclicked) {
+  if (counter >= 100 && !hasbuttonbeenclicked) {
     // @ts-ignore
     button.disabled = false;
   }
-  if (counter >= 25 && !hasbutton2beenclicked) {
+  if (counter >= 250 && !hasbutton2beenclicked) {
     // @ts-ignore
     button2.disabled = false;
   }
@@ -89,12 +93,17 @@ function updateDisplay(val) {
 
 }
 
-// function buyPrinter() {
-//   hasbutton5beenclicked = true
-//   counter += 2000;
-// }
+function upgradeCount(val) {
+  document.getElementById("upgradecount").innerHTML = val;
+}
+
+function buyPrinter() {
+  counter -= 750
+}
+
 
 function drawPrinter() {
+  upgradeCount(++upgrade)
   // hasbutton5beenclicked = true
   counter += 2000
   updateDisplay(counter)
@@ -102,6 +111,6 @@ function drawPrinter() {
   // @ts-ignore
   // button5.disabled = true;
 
-  // buyPrinter()
+  buyPrinter()
 }
 
