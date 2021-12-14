@@ -20,6 +20,8 @@ let hasbutton5beenclicked = false
 
 let upgrade = 0
 
+let printer = 2000
+
 // let upgradecount = document.getElementById('upgradecount')
 
 // let increment = 10000
@@ -82,7 +84,7 @@ function updateDisplay(val) {
     // @ts-ignore
     button2.disabled = false;
   }
-  if (counter >= 1000 && !hasbutton5beenclicked) {
+  if (counter >= 10 && !hasbutton5beenclicked) {
     // @ts-ignore
     button5.disabled = false;
   }
@@ -102,15 +104,16 @@ function buyPrinter() {
 }
 
 
-function drawPrinter() {
+function drawPrinter(printer) {
   upgradeCount(++upgrade)
   // hasbutton5beenclicked = true
   counter += 2000
-  updateDisplay(counter)
 
   // @ts-ignore
   // button5.disabled = true;
 
+  // drawCount(printer)
+  updateDisplay(++counter)
   buyPrinter()
 }
 
