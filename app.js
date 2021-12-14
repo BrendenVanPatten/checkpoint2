@@ -4,11 +4,11 @@ let button = document.getElementById('five')
 
 let button2 = document.getElementById('ten')
 
-let button3 = document.getElementById('print')
+let button3 = document.getElementById('winner')
 
 let button4 = document.getElementById('count')
 
-let button5 = document.getElementById('winner')
+let button5 = document.getElementById('print')
 
 let hasbuttonbeenclicked = false
 
@@ -17,6 +17,8 @@ let hasbutton2beenclicked = false
 let hasbutton3beenclicked = false
 
 let hasbutton5beenclicked = false
+
+// let increment = 10000
 
 
 function drawCount() {
@@ -58,19 +60,21 @@ function countTen() {
 }
 
 function winner() {
-  hasbutton5beenclicked = true
-  counter += 2000
+  hasbutton3beenclicked = true
+  counter += 5000000
   updateDisplay(counter)
+  // @ts-ignore
+  button3.disabled = true;
 }
 
 function updateDisplay(val) {
   document.getElementById("counter-label").innerHTML = val;
 
-  if (counter >= 150 && !hasbuttonbeenclicked) {
+  if (counter >= 15 && !hasbuttonbeenclicked) {
     // @ts-ignore
     button.disabled = false;
   }
-  if (counter >= 250 && !hasbutton2beenclicked) {
+  if (counter >= 25 && !hasbutton2beenclicked) {
     // @ts-ignore
     button2.disabled = false;
   }
@@ -78,23 +82,26 @@ function updateDisplay(val) {
     // @ts-ignore
     button5.disabled = false;
   }
-  if (counter >= 100000 && !hasbutton3beenclicked) {
+  if (counter >= 10000 && !hasbutton3beenclicked) {
     // @ts-ignore
     button3.disabled = false;
   }
+
 }
 
-function buyPrinter() {
-  drawCount()
-  counter += 5000000;
-}
+// function buyPrinter() {
+//   hasbutton5beenclicked = true
+//   counter += 2000;
+// }
 
 function drawPrinter() {
-  hasbutton3beenclicked = true
+  // hasbutton5beenclicked = true
+  counter += 2000
+  updateDisplay(counter)
 
   // @ts-ignore
-  button3.disabled = true;
+  // button5.disabled = true;
 
-  buyPrinter()
+  // buyPrinter()
 }
 
